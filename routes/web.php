@@ -16,20 +16,26 @@ use App\http\Controllers\ContactController;
 
 Route::get('/', function () {
     return view ('home',[
-        "title" => "Home"
+        "title" => "Home",
+        "a" => "Hi my name is Fiqri Aulia Muhammad Bustami, you can call me fiqri"
     ]);
 });
 Route::get('/about', function () {
     return view('about',[
         "title" => "About",
         "nama" => "Fiqri Aulia Muhammad Bustami",
+        "nama1" => "Fiqri",
+        "nama2" => "CV",
         "email" => "ecsperce8@gmail.com",
-        "gambar" => "z.jpeg"
+        "gambar1" => "fiqri.jpg",
+        "gambar2" => "ceve.jpg"
     ]);
 });
 Route::get('/gallery', function () {
     return view('gallery',[
-        "title" => "Gallery"
+        "title" => "Gallery",
+        "poster" => "redesign.jpg",
+        "water" => "mineralwaterdesign.jpg"
     ]);
 });
 Route::resource('/contacts', ContactController::class);
